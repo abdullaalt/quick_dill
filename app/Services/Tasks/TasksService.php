@@ -7,7 +7,7 @@ use App\Services\MainService;
 use App\Models\Task;
 use App\Models\TasksText;
 
-class TasksService extends MainService{
+abstract class TasksService extends MainService{
 
     protected function getTasksList(string $sorted = 'id', bool|string $created_at, bool|string $status):object {
 
@@ -23,6 +23,14 @@ class TasksService extends MainService{
 
         return $desciptor->simplepaginate(30);
 
+    }
+
+    protected function deleteTask(int $task_id):array{
+        Task::find($task_id)->delete();
+        TasksText::where('task_id', $task_id)->delete();
+        return [
+            'result' => true
+        ];
     }
 
     protected function getTasksCount(){

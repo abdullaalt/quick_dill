@@ -96,6 +96,14 @@ var content = {
 
     },
 
+    deleteTask: function(task_id, el){
+        xhr.sendRequest('/tasks/'+task_id, 'taskDeleted', el, content, 'DELETE')
+    },
+
+    taskDeleted: function(s, data, el){
+        this.loadTasks()
+    },
+
     changeText: function(task_id, el){
         text = el.prev().text()
         el.prev().remove()

@@ -22,6 +22,10 @@ final class TasksStoreService extends TasksService{
 
     }
 
+    public function delete(int $task_id){
+        return $this->deleteTask($task_id);
+    }
+
     public function update(int $task_id, $request){
 
         $data = $request->all();

@@ -128,6 +128,7 @@
             <th>Текст</th>
             <th>Дата добавления</th>
             <th onclick="content.sorted('status')">Статус</th>
+            <th>Удалить</th>
         </tr>
         {{each(index, item) items}}
             <tr>
@@ -149,6 +150,7 @@
                         <a onclick="content.setStatus(${item.id}, $(this))">Завершить</a>
                     {{/if}}
                 </td>
+                <td><a onclick="content.deleteTask(${item.id}, $(this))">Удалить</a></td>
             </tr>
         {{/each}}
     </table>

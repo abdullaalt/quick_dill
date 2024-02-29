@@ -23,6 +23,10 @@ class TasksController extends Controller
         return $tasksStoreService->update($task_id, $request);
     }
 
+    public function delete(int $task_id, TasksStoreService $tasksStoreService){
+        return $tasksStoreService->delete($task_id);
+    }
+
     public function history(int $task_id, TasksItemsService $tasksItemsService){
         return $tasksItemsService->history($task_id);
     }
