@@ -54,7 +54,7 @@ var content = {
     renderPaginate: function(){
         let p = $('.tasks-paginate')
         p.html('')
-        pages = Math.ceil(this.count/3)
+        pages = Math.ceil(this.count/30)
         for (i=1; i<=pages; i++){
             if (i == this.current_page){
                 p.append($('<span>'+i+'</span>'))
