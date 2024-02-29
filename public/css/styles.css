@@ -1,0 +1,146 @@
+main {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.tasks {
+    width: 60%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ccc;
+    padding: 5px;
+    color: #222;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.tasks-paginate {
+    margin: 20px;
+    text-align: center;
+    background: #cc;
+}
+
+table th{
+    cursor: pointer;
+    font-size: 13px;
+    background: #6ea39c;
+    color: #fff;
+}
+
+.tasks-paginate * {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    background: #f7f7f7;
+    margin: 0 5px;
+}
+
+.tasks-paginate span {
+    background-color: #ccc;
+}
+
+.field.text-input input {
+    display: block;
+    height: 25px;
+    margin: 3px 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+.field.btn-input input, input[type=button] {
+    background: #d57d2e;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+td a {
+    color: #d57d2e;
+    font-size: 11px;
+    text-decoration: underline;
+}
+span.is_updated {
+    font-size: 10px;
+    color: #ccc;
+}
+
+td textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 70%;
+}
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.popup > div {
+    width: 500px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 500px;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.history-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.history-item span {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #636363;
+}
+td input[type="button"] {
+    margin: 0 5px;
+}
+.forms {
+    width: 200px;
+}
+
+.forms input[type=text], textarea {
+    width: 100%;
+}
+.filter-panel {
+    display: flex;
+    margin: 10px 0;
+    gap: 30px;
+}
